@@ -6,5 +6,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blogapi/v1/', include('blogapi.urls')),
     path('blogapi/v1/auth/', include("rest_framework.urls")),
+    path('blogapi/v1/dj-rest-auth/', include("dj_rest_auth.urls")),
+    path('blogapi/v1/dj-rest-auth/registration/', include("dj_rest_auth.registration.urls")),
     path('', include("posts.urls"))
 ]
